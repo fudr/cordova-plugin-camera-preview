@@ -426,7 +426,7 @@ public class CameraPreview extends CordovaPlugin implements CameraActivity.Camer
     takePictureCallbackContext.error(message);
   }
 
-  private boolean startRecordVideo(String camera, int width, int height, int quality, boolean withFlash, CallbackContext callbackContext) {
+  private boolean startRecordVideo(final String camera, final int width, final int height, final int quality, final boolean withFlash, CallbackContext callbackContext) {
     if(this.hasView(callbackContext) == false){
       return true;
     }
@@ -436,7 +436,7 @@ public class CameraPreview extends CordovaPlugin implements CameraActivity.Camer
      cordova.getThreadPool().execute(new Runnable() {
       @Override
       public void run() {
-        fragment.startRecord(getFilePath(filename), camera, width, height, quality, withFlash);
+        fragment.startRecord(final getFilePath(filename), final camera, final width, final height, final quality, final withFlash);
       }
     });
 
