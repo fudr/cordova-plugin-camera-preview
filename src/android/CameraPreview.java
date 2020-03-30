@@ -436,7 +436,7 @@ public class CameraPreview extends CordovaPlugin implements CameraActivity.Camer
      cordova.getThreadPool().execute(new Runnable() {
       @Override
       public void run() {
-        fragment.startRecord(getFilePath(filename), camera, width, height, quality, withFlash);
+        fragment.startRecord(getFilePath(filename), final camera, final width, final height, final quality, final withFlash);
       }
     });
 
