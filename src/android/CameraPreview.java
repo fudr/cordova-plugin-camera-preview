@@ -431,7 +431,7 @@ public class CameraPreview extends CordovaPlugin implements CameraActivity.Camer
       return true;
     }
     final String filename = "videoTmp";
-    VIDEO_FILE_PATH = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES) + "/";
+    VIDEO_FILE_PATH = cordova.getActivity().getExternalFilesDir(null) + "/";
     startRecordVideoCallbackContext = callbackContext;
      cordova.getThreadPool().execute(new Runnable() {
       @Override
